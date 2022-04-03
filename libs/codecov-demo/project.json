@@ -1,0 +1,23 @@
+{
+  "root": "libs/codecov-demo",
+  "sourceRoot": "libs/codecov-demo/src",
+  "projectType": "library",
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/codecov-demo/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/codecov-demo"],
+      "options": {
+        "jestConfig": "libs/codecov-demo/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}
