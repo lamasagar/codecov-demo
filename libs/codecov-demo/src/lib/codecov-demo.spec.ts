@@ -1,4 +1,4 @@
-import { printGreaterNumber } from './codecov-demo';
+import { isValidPosition, printGreaterNumber } from './codecov-demo';
 const log = jest.fn();
 window.console.log = log;
 
@@ -23,5 +23,9 @@ describe('codecovDemo', () => {
 
   it('should return sum', () => {
     // expect(add(11, 10)).toEqual(11);
+  });
+
+  it('should return true, when 3,4 is passed', () => {
+    expect(isValidPosition(3, 4, 1)).toBe(false);
   });
 });

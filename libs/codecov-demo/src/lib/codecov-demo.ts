@@ -8,4 +8,12 @@ export const printGreaterNumber = (a: number, b: number): void => {
   return;
 };
 
-export const add = (a: number, b: number) => a + b;
+// Condition Coverage
+
+export const isValidPosition = (x: number, y: number, z: number) => {
+  if ((x > 10 || y > 20) && z > 0) {
+    return true;
+  }
+
+  return false;
+};
